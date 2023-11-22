@@ -1,0 +1,308 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', 'Helvetica', Helvetica;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(118, 184, 222), rgb(185, 128, 173));
+    color: black;
+    margin: 2%;
+    margin-top: 10%;
+    font-size: 20px;
+    text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1 {
+    font-size: 40px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    font-family: 'Helvetica', 'Helvetica', Helvetica;
+    text-align: center;
+    transition: font-size 0.5s ease;
+}
+h2 {
+    font-size: 30px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    font-family: 'Helvetica', 'Helvetica', Helvetica;
+    text-align: center;
+    transition: font-size 0.5s ease;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    align-content: space-evenly;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+ }
+ .main_travel_img{
+    width: 400px;
+}
+
+.grid_travel {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    align-content: space-evenly;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.main_img{
+    display: block;
+    margin: auto;
+    width: 320px;
+}
+.main_recipes_img{
+    display: block;
+    margin: auto;
+    width: 320px;
+}
+
+.sub_img{
+    width: 200px;
+}
+
+.likes_list ul,
+.ingredient_list ul,
+.ingredient_steps ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: center;
+}
+span{
+    position: relative;
+    left: -10px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    #gif-image {
+       visibility: hidden;
+    }
+    
+    #static-image {
+       display: block;
+    }
+}
+@media screen and (min-width: 630px){
+    .center{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+@media screen and (min-width: 750px) {
+    .grid {
+        width: 90%;
+        margin: auto;
+        grid-template-columns: 20% 20%;
+        grid-gap: 10px;
+        justify-content: space-around;
+    }
+}
+.main_travel_img{
+    display: block;
+    margin: auto;
+    width: 320px;
+    }
+
+button {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(198, 88, 156);
+}
+img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+ }
+
+/* dark */
+/* Your existing CSS styles here */
+
+body.dark-background {
+    background-image: linear-gradient(to right, rgb(30, 30, 30), rgb(30, 30, 30));
+    color: white; /* Set text color to white in dark mode */
+}
+
+body.light-background {
+    background-image: linear-gradient(to right, rgb(118, 184, 222), rgb(185, 128, 173));
+    color: black; /* Set text color to black in light mode */
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* tablet and mobile */
+    background: rgb(0, 0, 0); /* Adjust the opacity as needed */
+    border: 1px solid rgba(0, 0, 0); /* Border with opacity */
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, border 0.3s ease; /* Add transition for border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.532), 0 0 10px rgba(255, 0, 0, 0.8); /* Add glowing effect */
+    overflow: hidden; /* To prevent the glass effect from overflowing */
+}
+
+nav:hover {
+    background: rgba(255, 255, 255, 0); /* Adjust the opacity as needed */
+    border: 2px solid rgb(0, 55, 255); /* Bold red border on hover */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px; /* Adjust the margin to control the spacing between words */
+    border: 2px solid rgb(255, 0, 0); /* Bold red border */
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.678);
+    transition: color 0.3s ease;
+    padding: 8px; /* Add padding to create space inside the border */
+    display: inline-block; /* Ensure the border wraps around the text */
+}
+
+nav li a:hover {
+    color: rgb(88, 198, 154);
+}
+
+
+.likes_list ul,
+.ingredient_list ul,
+.ingredient_steps ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: center;
+}
+.content {
+    margin-top: 60px;
+}
+
+/* Add neon-colored border to all images */
+img,
+video {
+
+    border-style: inset;
+    border-color: rgb(255, 80, 100);
+    border-width: 7px;
+    padding: 10px;
+  
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    text-align: center;
+}
+
+.modal-content {
+    display: inline-block;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 10% auto;
+    background-color: rgb(85, 111, 197);
+    padding: 20px;
+    border: 5px solid rgb(106, 201, 160);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.mode-toggle {
+    margin-top: 5px;
+}
+/* dark */
+body.dark-background {
+    background-image: linear-gradient(to right, rgb(30, 30, 30), rgb(30, 30, 30));
+}
+
+/* light*/
+body.light-background {
+    background-image: linear-gradient(to right, rgb(118, 184, 222), rgb(185, 128, 173));
+}
+
+/* nav for glass effect hover */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(11, 236, 224, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.532);
+}
+
+nav:hover {
+    background: rgba(186, 167, 111, 0.9);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.678);
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: rgb(198, 88, 156);
+}
+#skip {
+    position: absolute;
+    left: -9999px;
+    font-size: 12px; 
+  }
+  
+  #skip:focus {
+    left: 10px; 
+    color: #000; 
+    background-color: #fff; 
+    padding: 5px; 
+    font-size: 14px; 
+  }
+
+
